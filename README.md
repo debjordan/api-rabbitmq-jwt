@@ -135,13 +135,6 @@ Se preferir usar a API síncrona, faça downgrade para RabbitMQ.Client 6.8.1:
 <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
 ```
 
-## Fluxo de Execução
-1. **API 2** gera um JWT válido
-2. **API 2** chama `POST /send-message` da **API 1** com o token
-3. **API 1** valida o JWT e publica mensagem na fila `user_updates`
-4. **API 2** consome mensagens da fila `user_updates`
-5. **API 2** retorna as mensagens consumidas
-
 ## Próximos Passos
 - Adicionar mais endpoints à API 1.
 - Configurar OAuth2 com OpenIddict.
